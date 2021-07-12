@@ -30,7 +30,7 @@ import ProTip from '../src/ProTip';
 import Copyright from '../src/Copyright';
 import Intro from '../components/Intro';
 import Info from '../components/Info';
-import LocationMap from "../components/LocationMap";
+// import LocationMap from "../components/LocationMap";
 
 export default function Index() {
     return (
@@ -38,7 +38,7 @@ export default function Index() {
             <Box my={4}>
                 <Intro></Intro>
                 <Info></Info>
-                <LocationMap></LocationMap>
+                {/*<LocationMap></LocationMap>*/}
                 {/*<Typography variant="h4" component="h1" gutterBottom>
                     Next.js example
                 </Typography>
