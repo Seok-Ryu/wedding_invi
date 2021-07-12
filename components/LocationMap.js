@@ -57,13 +57,6 @@ const LocationMap = () => {
                 <Paper elevation={3} id={elementId} style={{width: "500px", height: "400px"}}>
                     test
                 </Paper>
-
-                <Link href='http://kko.to/uepuFiT4o'>
-                    <Image src= '/images/kakao_map.png' width='100' height='50'/>
-                </Link>
-                <Link href='tel:01097371233'>
-                    010-9737-1233
-                </Link>
             </Box>
         </Container>
     )
