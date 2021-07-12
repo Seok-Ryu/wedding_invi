@@ -15,8 +15,8 @@ export default class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
                     />
                     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-                    {/*<script type="text/javascript"
-                            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=194d203f9fed44b8d0edf6c4158b8863&libraries=services"></script>*/}
+                    <script type="text/javascript"
+                            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=194d203f9fed44b8d0edf6c4158b8863&libraries=services"></script>
                 </Head>
                 <body>
                 <Main />
