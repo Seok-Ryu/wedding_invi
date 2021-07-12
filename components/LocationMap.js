@@ -18,25 +18,43 @@ import Image from "next/image";
 
 import Link from '../src/Link';
 
-export default function LocationMap() {
+const LONGITUDE = 37.5213937;
+const LATITUDE = 126.9838961;
+
+const elementId = 'map';
+
+const createMap = (longitude, latitude) => {
+    const container = document.getElementById(elementId);
+    const options = {
+        center: new kakao.maps.LatLng(longitude, latitude),
+        level: 5
+    };
+    const map = new kakao.maps.Map(container, options);
+
+    return map;
+}
+
+const createMarker = (longitude, latitude) => {
+    const markerPosition  = new kakao.maps.LatLng(longitude, latitude);
+    const marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+
+    return marker;
+}
+
+const LocationMap = () => {
     useEffect(()=>{
-        const container = document.getElementById('map');
-        const options = {
-            center: new kakao.maps.LatLng(37.5213937,126.9838961),
-            level: 5
-        };
-        const map = new kakao.maps.Map(container, options);
-        const markerPosition  = new kakao.maps.LatLng(37.5213786,126.9838787);
-        const marker = new kakao.maps.Marker({
-            position: markerPosition
-        });
-        marker.setMap(map);
+        const map = createMap(LONGITUDE, LATITUDE);
+        const markerOfWeddingLocation = createMarker(37.5213786,126.9838787);
+
+        markerOfWeddingLocation.setMap(map);
     }, [])
 
     return (
         <Container maxWidth="sm">
             <Box my={4}>
-                <Paper elevation={3} id={'map'} style={{width: "500px", height: "400px"}}>
+                <Paper elevation={3} id={elementId} style={{width: "500px", height: "400px"}}>
                     test
                 </Paper>
 
@@ -49,4 +67,6 @@ export default function LocationMap() {
             </Box>
         </Container>
     )
-};
+}
+
+export default LocationMap;
