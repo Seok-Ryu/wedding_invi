@@ -25,20 +25,26 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+
 import Link from '../src/Link';
-import ProTip from '../src/ProTip';
-import Copyright from '../src/Copyright';
 import Intro from '../components/Intro';
 import Info from '../components/Info';
+import Info2 from '../components/Info2';
 import LocationMap from "../components/LocationMap";
 
+const init = () => {
+
+};
+
 export default function Index() {
+    init();
     return (
-        <Container maxWidth="sm">
-            <Box my={4}>
+        <Container maxWidth="md" disableGutters={true}>
+            <Box p={0} m={0}>
                 <Intro></Intro>
                 <Info></Info>
                 <LocationMap></LocationMap>
+                <Info2></Info2>
                 {/*<Typography variant="h4" component="h1" gutterBottom>
                     Next.js example
                 </Typography>

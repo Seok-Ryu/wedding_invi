@@ -29,12 +29,12 @@ import Paper from '@material-ui/core/Paper';
 import Image from "next/image";
 
 
-export default function About() {
+export default function Intro() {
     return (
-        <Container maxWidth="sm">
-            <Box my={4}>
-                <Paper elevation={3}>
-                    <Image src= '/images/intro.jpeg' width='500' height='500'></Image>
+        <Container id={'intro'} disableGutters={true} >
+            {/*<Box my={4}>
+                <Paper variant="outlined" square >
+                    <Image src= '/images/intro.png' width='720' height='960'></Image>
                     <Box>
                         <Typography variant="h6" component="h1" gutterBottom>
                             이제는 말할수 있다 -
@@ -50,7 +50,10 @@ export default function About() {
                         </Typography>
                     </Box>
                 </Paper>
-            </Box>
+            </Box>*/}
+            <Paper variant="outlined" square >
+                <Image src= '/images/intro.png' width='720' height='960'></Image>
+            </Paper>
         </Container>
     );
 }

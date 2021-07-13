@@ -30,6 +30,13 @@ export default function MyApp(props) {
             <Head>
                 <title>My wedding</title>
                 <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+                <script type="text/javascript">
+                    const doc = document;
+                    const script = doc.createElement('script');
+                    script.src = 'https://ryuliah.disqus.com/embed.js';
+                    script.setAttribute('data-timestamp', +new Date());
+                    (doc.head || doc.body).appendChild(script);
+                </script>
             </Head>
             <ThemeProvider theme={theme}>
                 {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}

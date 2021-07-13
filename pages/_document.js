@@ -17,6 +17,7 @@ export default class MyDocument extends Document {
                     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
                     {/*<script type="text/javascript"
                             src="//dapi.kakao.com/v2/maps/sdk.js?appkey=194d203f9fed44b8d0edf6c4158b8863&libraries=services"></script>*/}
+                    {/*<script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>*/}
                 </Head>
                 <body>
                 <Main />
@@ -62,7 +63,6 @@ MyDocument.getInitialProps = async (ctx) => {
         });
 
     const initialProps = await Document.getInitialProps(ctx);
-    console.log('test222')
 
     return {
         ...initialProps,
